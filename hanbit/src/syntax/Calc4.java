@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 
  */
 public class Calc4 {
-	public static void main(String[] args) {
+	public  void main(String[] args) {
 		int a = 0, b = 0;
 
 		String op = "";
