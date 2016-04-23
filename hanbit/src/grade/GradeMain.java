@@ -16,24 +16,26 @@ public class GradeMain {
 	 */
 	
 	public static void main(String[] args) {
-		//----------------변수 선언========
+		//---------------(1)-변수 선언========
 		Scanner scanner = new Scanner(System.in);
-		Grade grade = new Grade();
-		int kor=0, eng=0, math=0,total=0,avg=0;
+		GradeBean grade = new GradeBean();
+		GradeService service = new GradeServiceImpl();
+		int total=0,avg=0;
 		String name = "" ;
+		String grd ="";
 		
-		//----------------파라미터 영역========
-		System.out.println("이름을 입력");
+		//--------------(2)--파라미터 영역========
+		grade.setName(scanner.next());
 		name=scanner.next();
 		System.out.println("국어,영어,수학 점수를 입력하시오");
-		kor = scanner.nextInt();
-		eng = scanner.nextInt();
-		math = scanner.nextInt();
+		
 		//-===================메소드 호출========
-		total = grade.getTotal(kor, eng, math);
-		avg=grade.getAvg(total);
+		grade.setKor(scanner.nextInt());
+		grade.setEng(scanner.nextInt());
+		grade.setMath(scanner.nextInt());
+		grade.setJava(scanner.nextInt());
 		//-------------리턴값 출력==========
-		System.out.println(name+"의 총점은" +total+ "이고, 평균은 " + avg+"이다.");
+		System.out.println(name + grd +": 학점");
 		
 		
 	}
