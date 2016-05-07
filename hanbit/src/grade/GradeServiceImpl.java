@@ -4,8 +4,7 @@ public class GradeServiceImpl implements GradeService {
 	// 총점 구하기
 	@Override
 	public int getTotal(GradeBean grade) {
-		int total = grade.getkor() + grade.getEng() + grade.getMath() + grade.getJava();
-		return total;
+		return 0;
 
 	}
 

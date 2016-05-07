@@ -25,7 +25,6 @@ public class GradeMain {
 		String grd ="";
 		
 		//--------------(2)--파라미터 영역========
-		grade.setName(scanner.next());
 		name=scanner.next();
 		System.out.println("국어,영어,수학 점수를 입력하시오");
 		
